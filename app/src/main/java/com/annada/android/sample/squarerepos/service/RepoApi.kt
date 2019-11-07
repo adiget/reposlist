@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface RepoApi {
     @GET("repos")
-    fun getRepos(): Observable<List<Repo>>
+    suspend fun getReposCortn(): List<Repo>
 }

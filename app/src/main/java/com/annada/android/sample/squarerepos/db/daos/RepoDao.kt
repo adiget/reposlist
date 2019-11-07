@@ -12,6 +12,9 @@ interface RepoDao {
     @get:Query("SELECT * from repo")
     val all: List<Repo>
 
+    @get:Query("SELECT * from repo")
+    val allLiveData: List<Repo>?
+
     @Insert(onConflict = REPLACE)
     fun insert(repo: Repo)
 
